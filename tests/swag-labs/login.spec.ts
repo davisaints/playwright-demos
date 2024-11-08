@@ -19,7 +19,7 @@ test.describe("Login functionality", () => {
       await loginPage.loginAs("Standart user");
     });
 
-    await test.step("Then the user is redirected to the products page and sees the Products header", async () => {
+    await test.step("Then the user is redirected to the products page", async () => {
       const productPageHeader = page.getByText("Products");
       await expect(productPageHeader).toBeVisible();
     });
